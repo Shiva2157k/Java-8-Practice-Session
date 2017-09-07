@@ -13,7 +13,7 @@ public class IPAdressValidator {
     }
 }
 class MyRegex{
- 
+
     String pattern;
 
     MyRegex(){

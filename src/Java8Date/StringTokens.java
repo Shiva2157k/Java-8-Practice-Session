@@ -28,7 +28,7 @@ public class StringTokens {
 
             }
         }
-        
+
         scan.close();
     }
 }
