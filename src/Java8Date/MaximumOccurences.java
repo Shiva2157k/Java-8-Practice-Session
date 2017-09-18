@@ -23,7 +23,6 @@ public class MaximumOccurences {
             if(m.getValue() > max){
                 max = m.getValue();
                 ans = m.getKey();
-
             }
         }
 
