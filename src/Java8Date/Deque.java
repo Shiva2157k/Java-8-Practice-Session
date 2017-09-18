@@ -2,37 +2,43 @@ package Java8Date;
 
 import java.util.ArrayDeque;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class Deque
 {
     public static void main(String[] args) {
-        HashMap<Integer, Integer> map = new HashMap<>();
+
         java.util.Deque<Integer> deque = new ArrayDeque<>();
 
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         int m = scan.nextInt();
-        int max = map.size();
+        int max = 0;
+        HashSet hs = new HashSet();
 
         for (int i = 0; i < n; i++) {
-            if (i >= m) {
-                int old = deque.remove();
-                if (map.get(old) == 1) {
-                    map.remove(old);
-                } else {
-                    map.put(old, map.get(old) - 1);
-                }
-            }
-
             int num = scan.nextInt();
-            deque.add(num);
-            map.merge(num, 1, Integer::sum);
 
-            max = Math.max(max, map.size());
+            deque.add(num);
+            hs.add(num);
+
+            if(deque.size() == m+1){
+
+                int out = (int) deque.remove();
+
+                if(!deque.contains(out)){
+                    hs.remove(out);
+                }
+
+            }
+            max = Math.max(hs.size(),max);
+
+
         }
 
         scan.close();
+
         System.out.println(max);
     }
 
