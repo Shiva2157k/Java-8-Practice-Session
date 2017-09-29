@@ -1,6 +1,16 @@
 package Java8Date;
 
 import java.util.Scanner;
+/*
+i  j   subarray
+-  -   --------
+0  0       [1]
+0  1     [1,2]
+0  2   [1,2,3]
+1  1       [2]
+1  2     [2,3]
+2  2       [3]
+* */
 
 public class SubArray {
 
