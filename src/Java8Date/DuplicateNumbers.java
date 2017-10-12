@@ -12,7 +12,7 @@ public class DuplicateNumbers {
         for(int d : a){
 
             if(nodup.add(d)==false){
-               // System.out.println(d);
+                System.out.println(d);
             }
 
         }
